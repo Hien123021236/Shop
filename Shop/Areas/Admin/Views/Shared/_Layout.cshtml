@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Management Website</title>
+    <script src="@Url.Content("~/Scripts/jquery-3.4.1.min.js")"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+
+    <link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.default.min.css" rel="stylesheet" />
+    <script src="https://kendo.cdn.telerik.com/2020.3.1021/js/kendo.all.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <style>
+        .menu {
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            z-index: 100;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top menu">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="@Url.Action("Index",null,new { area = "Admin", controller = "Phones" }, Request.Url.Scheme)" class="nav-item nav-link">Phones</a>
+                    <a href="@Url.Action("Index",null,new { area = "Admin", controller = "Laptops" }, Request.Url.Scheme)" class="nav-item nav-link">Laptops</a>
+                    <a href="#" class="nav-item nav-link">Bills</a>
+                    <a href="#" class="nav-item nav-link">Orders</a>
+                    <a href="#" class="nav-item nav-link">Customers</a>
+                    <a href="#" class="nav-item nav-link">Inventory</a>
+                    <a href="#" class="nav-item nav-link">Reports</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    @RenderBody()
+</body>
+</html>

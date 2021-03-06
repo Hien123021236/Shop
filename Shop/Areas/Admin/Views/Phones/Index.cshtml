@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phones</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <div class="k-content">
+            <div style="padding-left:10px;padding-top:10px;">
+                <a id="AddPhoneButton" class="btn btn-primary" href="@Url.Action("Create",null,new { area = "Admin", controller = "Phones" }, Request.Url.Scheme)">
+                    <i class="fas fa-plus"></i>Create Phone
+                </a>
+            </div>
+            <hr />
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
+

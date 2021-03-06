@@ -1,0 +1,315 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Phone</title>
+    <style>
+        .form-control:focus {
+            box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
+        }
+        button {
+            outline: 0 !important;
+        }
+        .badge {
+            border-radius: 0;
+            font-size: 12px;
+            line-height: 1;
+            padding: .375rem .5625rem;
+            font-weight: normal;
+            border: none
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <button class=""></button>
+    </div>
+    <div class="row" style="margin:16px;">
+        <div class="col-lg-4" style="margin-top:10px;">
+            <div class="row">
+                <table>
+                    <tr>
+                        <th><b>Product Name</b></th>
+                        <td><input class="form-control" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <th><b>Production</b></th>
+                        <td><input id="productions" style="width: 100%;" /></td>
+                    </tr>
+                    <tr>
+                        <th><b>Color</b></th>
+                        <td><input class="form-control" id="picker" /></td>
+                    </tr>
+                    <tr>
+                        <th><b>Release Day</b></th>
+                        <td><input id="datepicker" value="10/10/2020" title="datepicker" style="width: 100%" /></td>
+                    </tr>
+                    <tr>
+                        <th><b>Base Price</b></th>
+                        <td><input id="numeric" type="number" title="numeric" value="20000000" min="0" max="500000000" step="1000000" style="width: 100%;" /></td>
+                    </tr>
+                    <tr>
+                        <th><b>Price</b></th>
+                        <td><input id="numeric1" type="number" title="numeric" value="20000000" min="0" max="500000000" step="1000000" style="width: 100%;" /></td>
+                    </tr>
+                    <tr>
+                        <th><b>Quantity</b></th>
+                        <td><input id="numeric2" type="number" title="numeric" value="1" min="0" max="10000" step="1" style="width: 100%;" /></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                <input name="files" id="files" type="file" />
+            </div>
+        </div>
+        <div class="col-lg-8" style="margin-top:10px;">
+            <div id="data">
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">NETWORK</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">BODY</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">DISPLAY</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">PLATFORM</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">MEMORY</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">MAIN CAMERA</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">SELFIE CAMERA</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">SOUND</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">COMMS</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">FEATURES</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-2 specicals" value="network"><b style="color:red;">BATTERY</b></div>
+                    <div class="col-lg-10 infors">
+                        <div class="row infor">
+                            <input type="text" id="textbox" class="col-lg-2 form-control infor-key" />
+                            <input type="text" id="textbox" class=" col-lg-8 form-control infor-value" />
+                            <button class="col-lg-2 badge badge-success addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $(".addbtn").click(function(){
+                $(this).parent().parent().append('<div class="row infor">'
+                            +'<input id="textbox" class="col-lg-2 form-control infor-key"/>'
+                            +'<input id="textbox" class=" col-lg-8 form-control infor-value" />'
+                            +'<button class="col-lg-2 badge badge-danger removebtn">Delete</button>'
+                            +'</div>');
+
+                $(".removebtn").click(function(){
+                    debugger;
+                    $(this).parent().remove();
+                });
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        function preview(e) {
+            $("#background").css("background-color", e.value);
+        }
+
+        $("#picker").kendoColorPicker({
+            value: "#ffffff",
+            buttons: false,
+            select: preview
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#productions").kendoComboBox({
+                placeholder: "Select product",
+                dataTextField: "ProductionName",
+                dataValueField: "Id",
+                minLength: 3,
+                dataSource: {
+                    type: "odata",
+                    serverFiltering: true,
+                    transport: {
+                        read: {
+                            url: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Products",
+                        }
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            // create DatePicker from input HTML element
+            $("#datepicker").kendoDatePicker();
+        });
+
+        $(document).ready(function() {
+            // create NumericTextBox from input HTML element
+            $("#numeric").kendoNumericTextBox();
+            $("#numeric1").kendoNumericTextBox();
+            $("#numeric2").kendoNumericTextBox();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#files").kendoUpload({
+                async: {
+                    saveUrl: "chunkSave",
+                    removeUrl: "remove",
+                    chunkSize: 11000,
+                },
+                directory: true,
+                directoryDrop:true
+            });
+        });
+    </script>
+
+    @*<script type="text/javascript">
+
+            $(document).ready(function (){
+                $(".addbtn").click(function(){
+
+                    // remove add
+                    // add remove
+                    // append
+                });
+
+                 $(".removebtn").click(function(){
+                    // remove add
+                    debugger;
+                });
+
+                $("#createbtn").click(function(){
+                    var data = [];
+                    $("#data).childen().foreach( item in collectino ){
+                        var spec = item.find('.infor').val();
+                        var infors = [];
+
+                        data.push({ spec : infors})
+                    }
+                    $.ajax(){
+                        data : {
+                            "data" : data,
+                            "img-front"  :  ,
+                            "img-left"  :  ,
+                            "img-right"  : ,
+                        }
+                    }
+                });
+
+
+            });
+
+
+        </script>*@
+</body>
+</html>
+
